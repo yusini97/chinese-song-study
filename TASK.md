@@ -49,8 +49,16 @@
    python tools/build_index.py
    ```
 
-7. 보고: 만든 곡(제목·문형 수), 건너뛴 곡(이유), 남은 대기 곡 수를 3~6줄로 정리한다. 실패한 곡이 있으면 이유를 적고 status는 `new`로 둔다.
+7. 새로 만든 곡이 있으면 GitHub Pages에 올린다. 공개 사이트라 **만든 곡 파일과 목록만** 올린다.
+   ```
+   git add index.html videos/<ID>/data.js videos/<ID>/index.html videos/<ID>/meta.json
+   git commit -m "새 곡: <곡명>, <곡명>"
+   git push origin main
+   ```
+   `git status`에 `description.txt`, `state/`, `queue.html`이 올라가 있으면 안 된다(.gitignore로 제외됨). 푸시가 실패하면 보고에 적고 다음 날 다시 시도한다.
+
+8. 보고: 만든 곡(제목·문형 수), 건너뛴 곡(이유), 남은 대기 곡 수, 푸시 결과를 3~6줄로 정리한다. 실패한 곡이 있으면 이유를 적고 status는 `new`로 둔다.
 
 ## 하지 않는 것
-- Git 커밋·푸시, 파일 삭제, 대기열 외 방문 기록 저장.
+- 7단계 외의 Git 작업(다른 파일 커밋, 강제 푸시, 브랜치 변경), 파일 삭제, 대기열 외 방문 기록 저장.
 - `description.txt` 내용을 data.js나 보고에 옮겨 적기.
