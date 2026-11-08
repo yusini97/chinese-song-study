@@ -1,0 +1,8 @@
+# 영상에서 받은 대사·설명란·음성은 개인 공부용 (저작권)
+videos/*/transcript.*
+videos/*/description.txt
+videos/*/*.m4a
+videos/*/*.vtt
+# Chrome에서 찾은 곡 대기열·확인 시각 (개인 기록)
+state/
+queue.html
